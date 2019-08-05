@@ -1,0 +1,6 @@
+<div class="addTask">
+<input #newTask class="addTask__input"
+       (keyup.enter)="this.utils.addTask(newTask.value)"  autofocus>
+
+<button class="addTask__button" (click)="this.utils.addTask(newTask.value)">ADD</button>
+</div>

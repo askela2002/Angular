@@ -1,0 +1,49 @@
+<table class="tableTasks" id="header">
+<tr *ngIf="this.utils.showHeader">
+    <td>
+        <div class="tableTasks__sortDate">
+            <div>
+                <fa-icon  class="dateAsc" (click)="this.utils.sortTasks('dateAsc')" [ngClass]="{
+                                'dateAsc-true' : this.utils.sorting === 'dateAsc'
+                             }" [icon]="faCaretUp" size="3x"></fa-icon>
+            </div>
+            <div>
+                <fa-icon class="dateDesc" (click)="this.utils.sortTasks('dateDesc')" [ngClass]="{
+                                'dateDesc-true' : this.utils.sorting === 'dateDesc'
+                             }" [icon]="faCaretDown"
+                         size="3x"></fa-icon>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div class="tableTasks__sortPriority">
+            <div>
+                <fa-icon class="priorityAsc" (click)="this.utils.sortTasks('priorAsc')" [ngClass]="{
+                                'priorityAsc-true' : this.utils.sorting === 'priorAsc'
+                             }" [icon]="faCaretUp"
+                         size="3x"></fa-icon>
+            </div>
+            <div>
+                <fa-icon class="priorityDesc" (click)="this.utils.sortTasks('priorDesc')" [ngClass]="{
+                                'priorityDesc-true' : this.utils.sorting === 'priorDesc'
+                             }" [icon]="faCaretDown"
+                         size="3x"></fa-icon>
+            </div>
+        </div>
+    </td>
+    <td>
+
+    </td>
+    <td><input  (keyup)="this.utils.inputSearch($event)" class="tableTasks__searchTask" type="text" placeholder="&#xF002;" style="font-family:Arial, FontAwesome, sans-serif; font-size: 20px;"></td>
+    <td>
+        <div class="tableTasks__filter">
+            <fa-icon (click)="this.utils.filterTasks()" [ngClass]="{
+                                'tableTasks__filter-false' : this.utils.filter === false,
+                                'tableTasks__filter-true' : this.utils.filter === true
+                             }" [icon]="faFilter" size="2x"></fa-icon>
+        </div>
+    </td>
+
+</tr>
+
+</table>

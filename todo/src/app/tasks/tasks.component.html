@@ -1,0 +1,61 @@
+<div class="tableTasks">
+    <table>
+
+
+        <tr *ngFor="let item of this.utils.tasksRender; let i = index">
+            <td>
+                {{ item.date }} <br>
+                {{ item.time }}
+            </td>
+            <td>
+                <div class="priorityRectangle">
+                    <p class="priorityRectangle__notation" id="priority{{ i }}">
+                        {{ item.priority }}
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="iconsPriority">
+                    <div>
+                        <fa-icon class="iconsPriority__up"(click)="this.utils.changePriority($event,  i, -1)" [icon]="faChevronUp"></fa-icon>
+                    </div>
+                    <div>
+                        <fa-icon class="iconsPriority__down" (click)="this.utils.changePriority($event, i, 1)" [icon]="faChevronDown"></fa-icon>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div id="task{{i}}" [ngClass]="{
+                                'taskText' : item.done === false,
+                                'taskText-done' : item.done === true
+                             }">
+                    <p>
+                        {{ item.task }}
+                    </p>
+                </div>
+            </td>
+
+            <td>
+                <fa-icon (click)="this.utils.editTask($event, i)" class="editIcon" [icon]="faEdit" size="2x"></fa-icon>
+
+                <fa-icon (click)="this.utils.completeTask($event, i)" id="complete{{ i }}"
+                         [icon]="faCheckCircle" size="2x"
+                         [ngClass]="{
+                                'confirmIcon' : item.done === false,
+                                'confirmIcon-done' : item.done === true
+                             }">
+                </fa-icon>
+
+                <fa-icon (click)="this.utils.deleteTask($event, i)" class="deleteIcon" [icon]="faTrashAlt" size="2x"></fa-icon>
+            </td>
+
+        </tr>
+
+    </table>
+</div>
+
+
+
+
+

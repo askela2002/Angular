@@ -1,0 +1,16 @@
+.addTask {
+  text-align: center;
+
+  &__input {
+    width: 600px;
+    height: 25px;
+    margin-right: 20px;
+
+  }
+  &__button {
+    width: 110px;
+    height: 30px;
+    background: #0097f4;
+    color: white;
+  }
+}

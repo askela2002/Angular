@@ -1,0 +1,64 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+.tableTasks {
+  color: grey;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  &__sortDate {
+    position: relative;
+    right: 65px;
+
+    .dateAsc {
+      position: relative;
+      top: 15px;
+      &-true{
+        color: red;
+      }
+    }
+
+    .dateDesc-true{
+      color: red;
+    }
+  }
+
+  &__sortPriority {
+    position: relative;
+    right: 15px;
+
+    .priorityAsc {
+      position: relative;
+      top: 15px;
+      &-true {
+        color: red;
+      }
+    }
+    .priorityDesc-true{
+      color: red;
+    }
+
+  }
+
+  &__searchTask {
+    position: relative;
+    top: 10px;
+    width: 545px;
+    height: 25px;
+    left: 25px;
+  }
+
+  &__filter {
+    position: relative;
+    top: 10px;
+    left: 60px;
+
+    &-false {
+      color: grey;
+    }
+    &-true {
+      color: red;
+    }
+
+  }
+}

@@ -1,0 +1,45 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+<div id="main">
+
+    <div class="title">{{ title }}</div>
+
+
+    <app-add-task></app-add-task>
+    <app-sort-search-filter-panel></app-sort-search-filter-panel>
+
+<app-tasks></app-tasks>
+</div>
+
+<div *ngIf="this.utils.editTaskWindow" class="editText">
+    <p class="editText__title"> Edit text</p>
+
+    <textarea #myInput class="editText__area" cols="30" rows="10" id="editTextarea">{{this.utils.taskEdit.trim()}}</textarea>
+    {{ myInput.focus() }}
+
+    <div (click)="this.utils.cancelEdit()" class="buttonCancel">
+        CANCEL
+    </div>
+    <div (click)="this.utils.confirmEdit()" class="buttonSave">
+        <p class="buttonSave__text">
+            SAVE
+        </p>
+    </div>
+</div>
+
+<div *ngIf="this.utils.deleteTaskWindow" class="confirmDeletion">
+    <p class="deleteItem">
+        Delete the task?
+    </p>
+
+    <div (click)="this.utils.cancelDelete()" class="buttonNo">
+        NO
+    </div>
+
+    <div (click)="this.utils.confirmDelete()" class="buttonYes">
+        <p class="buttonYes__text">
+            YES
+        </p>
+    </div>
+</div>

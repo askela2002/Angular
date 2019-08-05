@@ -1,0 +1,100 @@
+.title {
+  text-align: center;
+  margin: 50px 0 70px;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.editText {
+  position: absolute;
+  top: 35%;
+  left: 41%;
+  width: 320px;
+  height: 230px;
+  background: #edec1e;
+
+  &__title {
+    position: relative;
+    top: 5px;
+    text-align: center;
+  }
+
+  &__area {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    width: 260px;
+  }
+
+  .buttonCancel {
+    position: relative;
+    top: 20px;
+    left: 65px;
+    color: #0097f4;
+    font-family: sans-serif;
+  }
+
+  .buttonSave {
+    position: relative;
+    top: -5px;
+    left: 180px;
+    width: 90px;
+    height: 30px;
+    background: #0097f4;
+
+    &__text {
+      position: relative;
+      top: 6px;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+  }
+}
+
+.confirmDeletion {
+  position: absolute;
+  top: 40%;
+  left: 41.5%;
+  width: 250px;
+  height: 130px;
+  background: #eeeeee;
+
+  .deleteItem {
+    position: relative;
+    text-align: center;
+    top: 15px;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  .buttonNo {
+    position: relative;
+    top: 60px;
+    left: 50px;
+    color: #0097f4;
+    font-family: sans-serif;
+  }
+
+  .buttonYes {
+    position: relative;
+    top: 35px;
+    left: 115px;
+    width: 90px;
+    height: 30px;
+    background: #0097f4;
+
+    &__text {
+      position: relative;
+      top: 6px;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+  }
+}
+

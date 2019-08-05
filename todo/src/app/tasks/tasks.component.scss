@@ -1,0 +1,80 @@
+.tableTasks {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+ .priorityRectangle {
+    width: 45px;
+    height: 35px;
+    background: grey;
+    margin-left: 20px;
+
+    &__notation {
+      color: white;
+      text-align: center;
+      padding-top: 8px;
+      margin: 0;
+    }
+  }
+
+  .taskText {
+    width: 540px;
+    min-height: 40px;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #3a3a3a;
+  }
+
+  .taskText-done {
+    width: 540px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #3a3a3a;
+    background: #9eebfb;
+  }
+
+
+  tr {
+    vertical-align: top;
+  }
+
+  .iconsPriority{
+    margin-left: 20px;
+    color: #1b9af7;
+    &__up:hover{
+      color: #0f23e0;
+    }
+    &__down:hover{
+      color: #0f23e0;
+    }
+  }
+
+  .editIcon {
+    color: #4dde4d;
+  }
+
+  .confirmIcon {
+    color: #1b9af7;
+  }
+
+  .confirmIcon-done {
+    color: #56f3ec;
+  }
+
+  .deleteIcon {
+    color: red;
+  }
+
+}
+
+
+
+
+
+
+
+
